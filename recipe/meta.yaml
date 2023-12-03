@@ -34,14 +34,13 @@ requirements:
     - scanpy >=1.7.2
     - scikit-learn >=0.24.0
     - scipy >=1.2.0
-    - scvelo >=0.2.5
+    - scvelo >=0.3.1
     - seaborn >=0.10.0
     - wrapt >=1.12.1
 
-# TODO(michalk8): enable after https://github.com/theislab/scvelo/issues/1124 has been fixed
-# test:
-#   imports:
-#     - cellrank
+test:
+  imports:
+    - cellrank
 
 about:
   home: https://github.com/theislab/cellrank
