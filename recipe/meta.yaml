@@ -1,5 +1,5 @@
 {% set name = "cellrank" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fd6b1cc6a015df119dd8bfcd1129e86ee6aa871121aeeb3d1c1f42c71bd2215b
+  sha256: dc29fb3d703b7b920d024a2478904f5659e22f9ced3335b265289cf71041cde4
 
 build:
   number: 0
@@ -21,20 +21,20 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.8
-    - anndata >=0.8
+    - anndata >=0.9
     - docrep >=0.3.0
     - joblib >=0.13.1
     - matplotlib-base >=3.5.0
     - networkx >=2.2
     - numba >=0.51.0,!=0.57.0
-    - numpy >=1.17.0
+    - numpy >=1.22.0
     - pandas >=1.5.0
     - pygam >=0.8.0
     - pygpcca >=1.0.4
     - scanpy >=1.7.2
     - scikit-learn >=0.24.0
     - scipy >=1.2.0
-    - scvelo >=0.2.5
+    - scvelo >=0.3.1
     - seaborn >=0.10.0
     - wrapt >=1.12.1
 
