@@ -1,5 +1,5 @@
 {% set name = "cellrank" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 47c1d2e953ac91f572937d816142b4ac5f0c876174c60f857562de76a9f8aa61
+  sha256: 9310e866dbc61b03e841aff58d2b3d0f14241a4b8849854ee51ffeca6fb44399
 
 build:
   number: 0
