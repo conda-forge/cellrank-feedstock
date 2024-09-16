@@ -1,5 +1,5 @@
 {% set name = "cellrank" %}
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8eb8f9e5de80d118b916394fc9141be4c0b375458156f7bf697ec7febdd04d9c
+  sha256: 88a9f8044d80bc7c82b5cfc68ae6a2a2fd954b344c10f7e3ddf9b3a3262a6f50
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - setuptools_scm
   run:
