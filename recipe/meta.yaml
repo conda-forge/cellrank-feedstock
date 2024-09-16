@@ -20,7 +20,7 @@ requirements:
     - pip
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >=3.9
     - anndata >=0.9
     - docrep >=0.3.0
     - joblib >=0.13.1
