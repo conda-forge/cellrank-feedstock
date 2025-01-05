@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 88a9f8044d80bc7c82b5cfc68ae6a2a2fd954b344c10f7e3ddf9b3a3262a6f50
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - anndata >=0.9
     - docrep >=0.3.0
     - joblib >=0.13.1
@@ -40,6 +40,8 @@ requirements:
     - wrapt >=1.12.1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - cellrank
 
