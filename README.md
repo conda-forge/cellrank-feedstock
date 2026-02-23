@@ -153,4 +153,5 @@ Feedstock Maintainers
 
 * [@WeilerP](https://github.com/WeilerP/)
 * [@michalk8](https://github.com/michalk8/)
+* [@Marius1311](https://github.com/Marius1311/)
 
