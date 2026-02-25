@@ -11,11 +11,10 @@ Summary: Dynamics from multi-view single-cell data
 
 Development: https://github.com/theislab/cellrank
 
-Documentation: https://cellrank.readthedocs.io
+Documentation: https://cellrank.readthedocs.io/
 
 CellRank is a modular framework to study cellular dynamics based on Markov state modeling of
 multi-view single-cell data.
-
 
 Current build status
 ====================
