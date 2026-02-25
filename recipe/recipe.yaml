@@ -1,27 +1,28 @@
-{% set name = "cellrank" %}
-{% set version = "2.1.0" %}
+context:
+  name: cellrank
+  version: "2.1.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: 58a063e1699984355c008e25a91f376f8192d23c84c0c12109cbe27452241b61
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}
     - pip
     - hatchling
     - hatch-vcs
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - anndata >=0.11
     - docrep >=0.3
     - joblib >=1.4
@@ -41,22 +42,22 @@ requirements:
     - session-info2 >=0.2
     - wrapt >=1.16
 
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - cellrank
+tests:
+  - python:
+      imports:
+        - cellrank
+      python_version: ${{ python_min }}
 
 about:
-  home: https://github.com/theislab/cellrank
+  homepage: https://github.com/theislab/cellrank
   license: BSD-3-Clause
   license_file: LICENSE
   summary: Dynamics from multi-view single-cell data
   description: |
     CellRank is a modular framework to study cellular dynamics based on Markov state modeling of
     multi-view single-cell data.
-  doc_url: https://cellrank.readthedocs.io
-  dev_url: https://github.com/theislab/cellrank
+  documentation: https://cellrank.readthedocs.io
+  repository: https://github.com/theislab/cellrank
 
 extra:
   recipe-maintainers:
