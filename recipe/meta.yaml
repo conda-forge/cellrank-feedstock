@@ -1,5 +1,5 @@
 {% set name = "cellrank" %}
-{% set version = "2.0.7" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 657f4acf6af2acac49deceecf519403d105500e77fe7d424c475c2669dc142bc
+  sha256: 58a063e1699984355c008e25a91f376f8192d23c84c0c12109cbe27452241b61
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,26 +18,28 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
-    - setuptools_scm
+    - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
-    - anndata >=0.9
-    - docrep >=0.3.0
-    - joblib >=0.13.1
-    - matplotlib-base >=3.5.0
-    - networkx >=2.2
-    - numba >=0.51.0,!=0.57.0
-    - numpy >=1.22.0
-    - pandas >=1.5.0
-    - pygam >=0.8.0
+    - anndata >=0.11
+    - docrep >=0.3
+    - joblib >=1.4
+    - matplotlib-base >=3.9
+    - networkx >=3.4
+    - numba >=0.60
+    - numpy >=2
+    - pandas >=2.2
+    - pygam >=0.10
     - pygpcca >=1.0.4
-    - scanpy >=1.7.2
-    - scikit-learn >=0.24.0
-    - scipy >=1.12.0
-    - scvelo >=0.3.1
-    - seaborn >=0.10.0
-    - wrapt >=1.12.1
+    - rich >=13
+    - scanpy >=1.11
+    - scikit-learn >=1.6
+    - scipy >=1.14
+    - scvelo >=0.3
+    - seaborn >=0.13
+    - session-info2 >=0.2
+    - wrapt >=1.16
 
 test:
   requires:
