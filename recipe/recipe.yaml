@@ -1,6 +1,6 @@
 context:
   name: cellrank
-  version: "2.1.0"
+  version: 2.2.0
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 58a063e1699984355c008e25a91f376f8192d23c84c0c12109cbe27452241b61
+  sha256: f982f4d58e66f648dfed6cbc2fe6cceb95d12d65fc24b90f509ad3343a94f126
 
 build:
   number: 0
@@ -37,11 +37,9 @@ requirements:
     - scanpy >=1.11
     - scikit-learn >=1.6
     - scipy >=1.14
-    - scvelo >=0.3
     - seaborn >=0.13
     - session-info2 >=0.2
     - wrapt >=1.16
-
 tests:
   - python:
       imports:
