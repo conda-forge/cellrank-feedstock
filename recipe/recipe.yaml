@@ -1,6 +1,6 @@
 context:
   name: cellrank
-  version: "2.3.1"
+  version: "2.3.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 012ba1510f2c3c9cfedeebd7c7bfec7d6582ee90b9a02fbf39b1505c66653935
+  sha256: 120946194fb26f9ed2354f83f1f53b7f2d1c91cd564f198039f4b34e6ed8016f
 
 build:
   number: 0
